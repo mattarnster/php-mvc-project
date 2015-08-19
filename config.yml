@@ -1,0 +1,10 @@
+Database:
+  DB_HOST: 127.0.0.1
+  DB_USER: root
+  DB_PASS: root
+  DB_NAME: phpthing
+  OTHER_THING: stuff
+
+Routables:
+  Welcome: /
+  About: /about
