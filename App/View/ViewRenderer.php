@@ -11,9 +11,14 @@ class ViewRenderer {
   }
 
   function render() {
+    $this->replaceTemplateStrings();
+
+    print $this->view;
+  }
+
+  function replaceTemplateStrings() {
     foreach ($this->view_data as $key => $value) {
       $this->view = str_replace('{{' . $key . '}}', $value, $this->view);
     }
-    print $this->view;
   }
 }
