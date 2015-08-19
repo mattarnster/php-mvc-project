@@ -7,7 +7,9 @@ namespace App;
 include('App/Database/DBConnector.php');
 include('App/Config/ConfigReader.php');
 include('App/Router/Router.php');
+include('App/View/ViewRenderer.php');
 include('App/View/View.php');
+
 
 /**
  * User stuff

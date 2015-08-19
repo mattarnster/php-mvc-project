@@ -6,5 +6,6 @@
 </head>
 <body>
   <p>From a config->router->controller->view!</p>
+  <p>Test for templating: <pre>{{test}}</pre></p>
 </body>
 </html>

@@ -10,7 +10,9 @@ class WelcomeController extends BaseController {
   }
 
   function index() {
-    return $view = new View('welcome.index');
+    $view_data = ['test' => 'Lorem ipsum'];
+
+    return $view = new View('welcome.index', $view_data);
   }
 
   function post() {
