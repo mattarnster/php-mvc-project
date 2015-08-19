@@ -23,6 +23,7 @@ use App\Database\DBConnector;
 class Bootstrap {
   function __construct() {
     $cf = new ConfigReader();
+    
     $cf->readConfig();
 
     $db = new DBConnector($cf->getDatabaseConfig());
