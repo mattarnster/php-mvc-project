@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\View\View;
+
 class AboutController extends BaseController {
   function __construct() {
     // Controller init code

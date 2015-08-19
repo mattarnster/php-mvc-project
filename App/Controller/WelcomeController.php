@@ -2,9 +2,13 @@
 
 namespace App\Controller;
 
+use App\View\View;
+
 class WelcomeController extends BaseController {
+  
   function __construct() {
     // Controller init code
+    parent::__construct();
   }
 
   function index() {
