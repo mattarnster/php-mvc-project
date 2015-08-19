@@ -8,3 +8,5 @@ Database:
 Routables:
   Welcome: /
   About: /about
+
+Debug: 1

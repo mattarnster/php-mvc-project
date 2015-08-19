@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>View!</title>
+  @{bootstrap}
 </head>
 <body>
-  <p>From a config->router->controller->view!</p>
-  <p>Test for templating: <pre>{{test}}</pre></p>
+  <div class="container">
+    <h1 class="page-title">PHP-MVC</h1>
+    <p>Test for templating:</p>
+    <pre>{{test}}</pre>
+  </div>
 </body>
 </html>

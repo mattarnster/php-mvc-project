@@ -10,7 +10,7 @@ class AboutController extends BaseController {
   }
 
   function index() {
-    return $view = new View('about.index');
+    return $view = new View('about.index', []);
   }
 
   function post() {

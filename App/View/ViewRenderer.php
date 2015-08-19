@@ -2,6 +2,8 @@
 
 namespace App\View;
 
+use App\Helpers\ViewHelper;
+
 class ViewRenderer {
   private $view, $view_data;
 
@@ -12,13 +14,20 @@ class ViewRenderer {
 
   function render() {
     $this->replaceTemplateStrings();
+    $view = $this->replaceTemplateHelperStrings();
 
-    print $this->view;
+    print $view;
   }
 
   function replaceTemplateStrings() {
     foreach ($this->view_data as $key => $value) {
       $this->view = str_replace('{{' . $key . '}}', $value, $this->view);
     }
+  }
+
+  function replaceTemplateHelperStrings() {
+    $vh = new ViewHelper($this->view);
+    $view = $vh->addBootstrap();
+    return $view;
   }
 }

@@ -9,6 +9,8 @@ include('App/Config/ConfigReader.php');
 include('App/Router/Router.php');
 include('App/View/ViewRenderer.php');
 include('App/View/View.php');
+include('App/Helpers/ViewHelper.php');
+include('App/Log/Log.php');
 
 
 /**
@@ -21,6 +23,7 @@ include('App/Controller/AboutController.php');
 use App\Config\ConfigReader;
 use App\Router\Router;
 use App\Database\DBConnector;
+use App\Log;
 
 class Bootstrap {
   function __construct() {
@@ -36,4 +39,9 @@ class Bootstrap {
   }
 }
 
+$log = new Log\Log(1);
+$log->log("INFO", "STARTED UP");
+
 $b = new Bootstrap();
+
+$log->log("INFO", "FINISHED UP");
