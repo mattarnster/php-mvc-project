@@ -28,6 +28,7 @@ class ViewRenderer {
   function replaceTemplateHelperStrings() {
     $vh = new ViewHelper($this->view);
     $view = $vh->addBootstrap();
+    $view = $vh->addMenu();
     return $view;
   }
 }

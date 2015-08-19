@@ -8,8 +8,14 @@
 <body>
   <div class="container">
     <h1 class="page-title">PHP-MVC</h1>
-    <p>Test for templating:</p>
-    <pre>{{test}}</pre>
+    @{menu}
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <p>Test for templating:</p>
+        <pre>{{test}}</pre>
+      </div>
+    </div>
   </div>
 </body>
 </html>
