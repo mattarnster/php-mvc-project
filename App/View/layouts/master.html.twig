@@ -1,0 +1,21 @@
+{# master.html.twig #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style type="text/css">
+    .main {
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  {% include 'navbar.html.twig' %}
+  <div class="container main">
+    {% block content %} {% endblock %}
+  </div>
+</body>
+</html>

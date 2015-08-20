@@ -21,6 +21,11 @@ class ViewRenderer {
 
   function replaceTemplateStrings() {
     foreach ($this->view_data as $key => $value) {
+      var_dump(gettype($value));
+      if (gettype($value) == "array") {
+        $this->view = str_replace('@{{' . $key . '}}', 'where posts should go', $this->view);
+        return;
+      }
       $this->view = str_replace('{{' . $key . '}}', $value, $this->view);
     }
   }

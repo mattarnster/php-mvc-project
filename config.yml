@@ -8,5 +8,6 @@ Database:
 Routables:
   Welcome: /
   About: /about
+  Post: /posts
 
 Debug: 1

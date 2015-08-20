@@ -60,11 +60,17 @@ class DBConnector {
     $connection_string = 'mysql:host=' . $this->getDbHost() . ';dbname=' . $this->getDbName();
     
     try {
-      $db_connection = new \PDO($connection_string, $this->getDbUser(), $this->getDbPass());
+      $this->db_connection = new \PDO($connection_string, $this->getDbUser(), $this->getDbPass());
     } catch (\PDOException $e) {
-      throw new Exception("PDO Exception!", 1);
+      throw new \Exception("Couldn't connect to the DB!", 1);
     }
 
     return true;
+  }
+
+  public function executeQuery($query) {
+    $results = $this->db_connection->query($query);
+
+    return $results->fetchAll();
   }
 }

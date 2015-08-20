@@ -1,0 +1,27 @@
+{
+    "name": "root/php-mvc-project",
+    "description": "A self-made php app",
+    "authors": [
+        {
+            "name": "Matt Arnold",
+            "email": "matthew.arnold@m-w.co.uk"
+        }
+    ],
+    "require": {
+        "filp/whoops": "~1.1",
+        "twig/twig": "~1.0",
+        "symfony/finder": "^2.7"
+    },
+    "autoload": {
+      "classmap": [
+        "App/Config",
+        "App/Controller",
+        "App/Database",
+        "App/Helpers",
+        "App/Log",
+        "App/Models",
+        "App/Router",
+        "App/View"
+      ]
+    }
+}
