@@ -2,6 +2,8 @@
 
 namespace App\Config;
 
+use \Symfony\Component\Yaml\Yaml;
+
 class ConfigReader {
   private $database_config;
   private $routables_config;
@@ -10,7 +12,7 @@ class ConfigReader {
     $config = __DIR__.'/../../config.yml';
     
     $config = file_get_contents($config);
-    $config = \yaml_parse($config);
+    $config = Yaml::parse($config);
 
     if (!$config) {
       throw new \Exception("Error Processing Request: Couldn't read config file.", 1);

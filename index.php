@@ -1,31 +1,9 @@
 <?php
 namespace App;
 
-/**
- * Core stuff
- */
-// include('App/Database/DBConnector.php');
-// include('App/Config/ConfigReader.php');
-// include('App/Router/Router.php');
-// include('App/View/ViewRenderer.php');
-// include('App/View/View.php');
-// include('App/Helpers/ViewHelper.php');
-// include('App/Log/Log.php');
-// include('App/Controller/BaseController.php');
-
-/**
- * User stuff
- */
-// include('App/Models/Post.php');
-// include('App/Controller/WelcomeController.php');
-// include('App/Controller/AboutController.php');
-// include('App/Controller/PostController.php');
-
 // Require composer autoloader - YAY! No more manual includes!!!!!!!
 require_once 'vendor/autoload.php';
 require_once __DIR__ . '/vendor/twig/twig/lib/Twig/Autoloader.php';
-
-
 
 use App\Config\ConfigReader;
 use App\Router\Router;
@@ -34,6 +12,7 @@ use App\Log;
 
 use Whoops\Run as WhoopsRun;
 use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
+use Symphony\VarDumper;
 
 $mvc_version = "1.0";
 $mvc_author = "github.com/mattarnster";
