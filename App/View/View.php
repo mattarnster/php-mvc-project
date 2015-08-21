@@ -18,7 +18,7 @@ class View {
     );
     // set up environment
     $params = array(
-        'cache' => "../cache", 
+        'cache' => "../Cache", 
         'auto_reload' => true, // disable cache
         'autoescape' => true
     );

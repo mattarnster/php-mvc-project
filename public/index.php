@@ -1,9 +1,8 @@
 <?php
 namespace App;
 
-// Require composer autoloader - YAY! No more manual includes!!!!!!!
-require_once 'vendor/autoload.php';
-require_once __DIR__ . '/vendor/twig/twig/lib/Twig/Autoloader.php';
+// Require composer autoloader
+require_once '../vendor/autoload.php';
 
 use App\Config\ConfigReader;
 use App\Router\Router;
@@ -13,9 +12,6 @@ use App\Log;
 use Whoops\Run as WhoopsRun;
 use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
 use Symphony\VarDumper;
-
-$mvc_version = "1.0";
-$mvc_author = "github.com/mattarnster";
 
 class Bootstrap {
   function __construct() {
@@ -48,9 +44,4 @@ class Bootstrap {
   }
 }
 
-$log = new Log\Log(1);
-$log->log("INFO", "STARTED UP");
-
 $b = new Bootstrap();
-
-$log->log("INFO", "FINISHED UP");
