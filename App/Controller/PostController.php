@@ -12,7 +12,7 @@ class PostController extends BaseController {
 
   function index() {
     $posts = new Post();
-    $posts_data = $posts->getAllPosts();
+    $posts_data = $posts->fetchAll();
     
     return $view = new View('post.index', ['posts' => $posts_data]);
   }
