@@ -14,7 +14,8 @@ use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
 use Symphony\VarDumper;
 
 class Bootstrap {
-  function __construct() {
+
+  function __construct() {  
     $this->initErrorHandler();
 
     $this->setUpTwig();
