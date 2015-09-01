@@ -12,8 +12,7 @@
         "twig/twig": "~1.0",
         "symfony/finder": "^2.7",
         "symfony/var-dumper": "^2.7",
-        "symfony/yaml": "^2.7",
-        "maximebf/debugbar": "^1.10"
+        "symfony/yaml": "^2.7"
     },
     "autoload": {
       "classmap": [
