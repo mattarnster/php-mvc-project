@@ -24,8 +24,6 @@ class Bootstrap {
     
     $cf->readConfig();
 
-    $db = new DBConnector($cf->getDatabaseConfig());
-
     $router = new Router($cf->getRoutablesConfig());
     
     $d_routes = $cf->getRoutablesConfig();
@@ -37,7 +35,6 @@ class Bootstrap {
     $whoops = new WhoopsRun();
     $handler = new WhoopsPrettyPageHandler();
     $whoops->pushHandler($handler)->register();
-    return $this;
   }
 
   private function setUpTwig() {
