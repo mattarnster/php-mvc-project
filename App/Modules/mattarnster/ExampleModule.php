@@ -27,7 +27,7 @@ class ExampleModule implements Module {
   function generatePostViewMarkup() {
     $posts = new Post();
     $posts = $posts->fetchAll();
-    die(var_dump($posts));
+    //die(var_dump($posts));
     $output = [];
     
     foreach ($posts as $post) {

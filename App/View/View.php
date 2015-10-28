@@ -16,7 +16,7 @@ class View {
     $view_data['modules'] = $modules->getModules();
     $view_data['module_renderables'] = $modules->getRenderables();
 
-    var_dump($modules->getRenderables());
+    //var_dump($modules->getRenderables());
 
     $loader = new \Twig_Loader_Filesystem(
         array (
