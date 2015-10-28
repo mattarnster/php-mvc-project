@@ -9,5 +9,9 @@ Routables:
   Welcome: /
   About: /about
   Post: /posts
+  Admin: /admin
+
+Modules:
+  mattarnster: ExampleModule
 
 Debug: 1

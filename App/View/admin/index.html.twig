@@ -1,0 +1,20 @@
+{% extends 'master.html.twig' %}
+
+{% block content %}
+  <h1 class="page-title">Admin Section</h1>
+  <hr>
+  <div class="well">
+    <p><strong>System Information: </strong></p>
+    <p><strong>Version: 1.0</strong></p>
+    <p><strong>Modules:</strong></p>
+    <ul>
+      {% for modulename in modules %}
+        <li>{{ modulename }}</li>
+      {% endfor %}
+    </ul>
+    <p><strong>Module renderables: </strong></p>
+    <ul>
+      {{ $module_renderables }}
+    </ul>
+  </div>
+{% endblock %}

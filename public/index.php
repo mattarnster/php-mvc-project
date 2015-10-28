@@ -8,6 +8,7 @@ use App\Config\ConfigReader;
 use App\Router\Router;
 use App\Database\DBConnector;
 use App\Log;
+use \App\Modules\ModuleRegistry;
 
 use Whoops\Run as WhoopsRun;
 use Whoops\Handler\PrettyPageHandler as WhoopsPrettyPageHandler;
@@ -24,10 +25,11 @@ class Bootstrap {
     
     $cf->readConfig();
 
+    $module_registry = \App\Modules\ModuleRegistry::getInstance();
+    $module_registry->registerModules($cf->getModuleConfig());
+
     $router = new Router($cf->getRoutablesConfig());
-    
-    $d_routes = $cf->getRoutablesConfig();
-    
+        
     $router->route();
   }
 

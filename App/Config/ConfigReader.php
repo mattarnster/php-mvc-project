@@ -7,6 +7,7 @@ use \Symfony\Component\Yaml\Yaml;
 class ConfigReader {
   private $database_config;
   private $routables_config;
+  private $modules_config;
 
   public function readConfig() {
     $config = __DIR__.'/../../config.yml';
@@ -20,6 +21,7 @@ class ConfigReader {
 
     $this->database_config = $config['Database'];
     $this->routables_config = $config['Routables'];
+    $this->modules_config = $config['Modules'];
 
     return true;
   }
@@ -30,5 +32,9 @@ class ConfigReader {
 
   public function getRoutablesConfig() {
     return $this->routables_config;
+  }
+
+  public function getModuleConfig() {
+    return $this->modules_config;
   }
 }
